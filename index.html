@@ -2,42 +2,111 @@
 <html>
 <head>
 	<title>Countdown alla fine della scuola</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #F7F7F7;
-			text-align: center;
-		}
-		
-		h1 {
-			font-size: 48px;
-			margin-top: 50px;
-			margin-bottom: 20px;
-			color: #333;
-		}
-		
-		#countdown {
-			font-size: 64px;
-			font-weight: bold;
-			color: #333;
-			margin-bottom: 50px;
-		}
-		
-		#countdown span {
-			display: inline-block;
-			min-width: 80px;
-			padding: 10px;
-			background-color: #FFF;
-			border-radius: 5px;
-			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-			margin: 0 10px;
-		}
-		
+	
+
+	
+
+		font-family: Arial, sans-serif;
+
+		background-color: #F7F7F7;
+
+		text-align: center;
+
+	}
+
+	
+
+	h1 {
+
+		font-size: 48px;
+
+		margin-top: 50px;
+
+		margin-bottom: 20px;
+
+		color: #333;
+
+	}
+
+	
+
+	#countdown {
+
+		font-size: 64px;
+
+		font-weight: bold;
+
+		color: #333;
+
+		margin-bottom: 50px;
+
+		display: flex;
+
+		flex-wrap: wrap;
+
+		justify-content: center;
+
+		align-items: center;
+
+		text-align: center;
+
+	}
+
+	
+
+	#countdown span {
+
+		display: block;
+
+		margin-bottom: 10px;
+
+	}
+
+	
+
+	#countdown span.num {
+
+		font-size: 80px;
+
+		background-color: #333;
+
+		color: #FFF;
+
+		padding: 20px;
+
+		border-radius: 5px;
+
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+	}
+
+	
+
+	@media screen and (max-width: 767px) {
+
 		#countdown span.num {
-			background-color: #333;
-			color: #FFF;
+
+			font-size: 48px;
+
+			padding: 10px;
+
 		}
-	</style>
+
+		
+
+		#countdown span:last-child {
+
+			margin-bottom: 0;
+
+		}
+
+	}
+
+	
+
+</style>
+		
+	
 </head>
 <body>
 	<h1>Countdown alla fine della scuola</h1>
