@@ -1,7 +1,10 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Countdown alla fine della scuola</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -37,34 +40,39 @@
 			background-color: #333;
 			color: #FFF;
 		}
+		
+		@media screen and (max-width: 768px) {
+			h1 {
+				font-size: 36px;
+			}
+			#countdown {
+				font-size: 48px;
+				margin-bottom: 30px;
+			}
+			#countdown span {
+				min-width: 60px;
+				padding: 8px;
+				margin: 0 5px;
+			}
+		}
 	</style>
 </head>
 <body>
 	<h1>Countdown alla fine della scuola</h1>
 	<div id="countdown"></div>
 	<script>
-
 		var countDownDate = new Date("June 7, 2023 00:00:00").getTime();
 
-
 		var x = setInterval(function() {
-
-			
 			var now = new Date().getTime();
-
-
 			var distance = countDownDate - now;
-
-			
 			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-			
 			document.getElementById("countdown").innerHTML = "<span class='num'>" + days + "</span><span>giorni</span><span class='num'>" + hours + "</span><span>ore</span><span class='num'>" + minutes + "</span><span>minuti</span><span class='num'>" + seconds + "</span><span>secondi</span>";
 
-			
 			if (distance < 0) {
 				clearInterval(x);
 				document.getElementById("countdown").innerHTML = "La scuola è finita!";
